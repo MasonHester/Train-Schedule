@@ -1,0 +1,38 @@
+/* 
+#272727 b1
+#747474 b2
+#FF652F r
+#FFE400 y
+#14A76C g
+*/
+
+body {
+    text-align: center;
+    background: #272727;
+}
+
+.jumbotron {
+    background: #FF652F;
+    padding: 30px 50px;
+    margin: 20px 0px 10px 0px;
+}
+
+.trainDisplay {
+    background: #747474;
+    margin: 10px 0px;
+}
+
+.inputDisplay {
+    background: #747474;
+    margin: 10px 0px 20px 0px;
+}
+
+.card-header {
+    background: #FF652F;
+}
+
+.submitButton {
+    background: #FF652F;
+    border-color: #272727;
+    color: #272727;
+}

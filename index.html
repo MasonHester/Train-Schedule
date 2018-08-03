@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Animals API</title>
+        <title>Train Schedules</title>
         <link rel "stylesheet" type="text/css" href="./assets/css/reset.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
@@ -15,9 +15,12 @@
                 <div class="d-none d-md-block col-md-1"></div>
 
                 <div class="col-12 col-md-10">
-                    <div class="card">
+                    <div class="jumbotron">
+                        <h1 class="timeDisplay"></h1>
+                    </div>
+                    <div class="card trainDisplay">
                         <div class="card-header">
-                            <h1>Data</h1>
+                            <h1>Trains Schedule</h1>
                         </div>
 
                         <div class="card-body">
@@ -25,10 +28,10 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">Name</th>
-                                        <th scope="col">Dest</th>
-                                        <th scope="col">Frenq</th>
-                                        <th scope="col">Next Arr</th>
-                                        <th scope="col">Min Away</th>
+                                        <th scope="col">Destination</th>
+                                        <th scope="col">Frequency</th>
+                                        <th scope="col">Next Arrival</th>
+                                        <th scope="col">Minutes Away</th>
                                         <th scope="col"></th>
                                     </tr>
                                 </thead>
@@ -37,34 +40,34 @@
                         </div>
                     </div>
 
-                    <div class="card">
-                        <div class="cavrd-header">
-                            <h1>Input</h1>
+                    <div class="card inputDisplay">
+                        <div class="card-header">
+                            <h1>Add a Train to the Schecdule</h1>
                         </div>
 
                         <div class="card-body">
                             <form>
                                 <div class="form-group">
-                                    <label for="trainNameInput">Name</label>
+                                    <label for="trainNameInput">Name of the Train</label>
                                     <input type="text" class="form-control" id="trainNameInput" placeholder="Enter Train Name">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="trainDestinationInput">Dest</label>
+                                    <label for="trainDestinationInput">Destination of the Train</label>
                                     <input type="text" class="form-control" id="trainDestinationInput" placeholder="Enter Train Destination">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="trainFirstTimeInput">first time</label>
+                                    <label for="trainFirstTimeInput">First Arrival of Train</label>
                                     <input type="number" class="form-control" id="trainFirstTimeInput" placeholder="Enter First Train Time">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="trainFrequencyInput">freq</label>
+                                    <label for="trainFrequencyInput">Frequency of Train Arrivals</label>
                                     <input type="number" class="form-control" id="trainFrequencyInput" placeholder="Enter Train Frequency">
                                 </div>
 
-                                <button type="submit" class="btn btn-primary submitButton">Submit</button>
+                                <button type="submit" class="btn btn-primary submitButton">Add Train</button>
                             </form>
                         </div>
                     </div>

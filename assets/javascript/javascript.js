@@ -31,12 +31,12 @@ $(document).ready(function () {
         // database.ref("trains/" + trainName).push();
         // database.ref("trains/" + trainName).set(trainJSON);
 
-        database.ref().push(trainJSON);
+        database.ref("trains/").push(trainJSON);
 
         $("form")[0].reset();
     }
 
-    database.ref().on("child_added", function(childSnapshot) {
+    database.ref("trains/").on("child_added", function(childSnapshot) {
 
         let name = childSnapshot.val().trainName;
         let destination = childSnapshot.val().trainDestination;
@@ -61,19 +61,27 @@ $(document).ready(function () {
         const frequencyCol = $("<td>");
         const nextArrivalCol = $("<td>");
         const minutesAwayCol = $("<td>");
-        const removeCol = $("<td>");
 
         nameCol.text(name);
         destinationCol.text(destination);
         frequencyCol.text(frequency);
         nextArrivalCol.text(nextArrival);
         minutesAwayCol.text(minutesAway);
-        removeCol.text("x");
 
-        tableRow.append(nameCol, destinationCol, frequencyCol, nextArrivalCol, minutesAwayCol, removeCol).attr("data-train-name", name);
+        tableRow.append(nameCol, destinationCol, frequencyCol, nextArrivalCol, minutesAwayCol).attr("data-train-name", name);
         $(".tableBody").append(tableRow);
     });
 
+    function updateTimer() {
+        let timeForDisplay = moment().format("hh:mm:ss A");
+        $(".timeDisplay").text(timeForDisplay);
+        console.log(timeForDisplay);
+        setTimeout(updateTimer, 1000);
+    }
+
+
 
     $(".submitButton").on("click", submitData);
+
+    updateTimer();
 });
