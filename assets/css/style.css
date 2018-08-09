@@ -11,6 +11,24 @@ body {
     background: #272727;
 }
 
+form {
+    background: #272727;
+    color: #E8E8E8;
+    padding: 10px;
+}
+
+.submitButton {
+    background: #FF652F;
+    border-color: #272727;
+    color: #272727;
+}
+
+.resetButton {
+    background: #FF652F;
+    border-color: #272727;
+    color: #272727;
+}
+
 .jumbotron {
     background: #FF652F;
     padding: 30px 50px;
@@ -24,6 +42,11 @@ body {
 
 .inputDisplay {
     background: #747474;
+    margin: 10px 0px;
+}
+
+.resetDisplay {
+    background: #747474;
     margin: 10px 0px 20px 0px;
 }
 
@@ -31,8 +54,12 @@ body {
     background: #FF652F;
 }
 
-.submitButton {
-    background: #FF652F;
-    border-color: #272727;
-    color: #272727;
+.form-row {    
+    padding: 5px;    
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }

@@ -20,7 +20,7 @@
                     </div>
                     <div class="card trainDisplay">
                         <div class="card-header">
-                            <h1>Trains Schedule</h1>
+                            <h1>Train Schedules</h1>
                         </div>
 
                         <div class="card-body">
@@ -32,7 +32,6 @@
                                         <th scope="col">Frequency</th>
                                         <th scope="col">Next Arrival</th>
                                         <th scope="col">Minutes Away</th>
-                                        <th scope="col"></th>
                                     </tr>
                                 </thead>
                                 <tbody class="tableBody"></tbody>
@@ -42,29 +41,29 @@
 
                     <div class="card inputDisplay">
                         <div class="card-header">
-                            <h1>Add a Train to the Schecdule</h1>
+                            <h1>Add a Train to the Schedule</h1>
                         </div>
 
                         <div class="card-body">
                             <form>
-                                <div class="form-group">
-                                    <label for="trainNameInput">Name of the Train</label>
-                                    <input type="text" class="form-control" id="trainNameInput" placeholder="Enter Train Name">
+                                <div class="form-row">
+                                    <label class="col-md-3 formLabel" for="trainNameInput">Name of the Train</label>
+                                    <input type="text" class="form-control col-md-9" id="trainNameInput" placeholder="Enter Train Name">
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="trainDestinationInput">Destination of the Train</label>
-                                    <input type="text" class="form-control" id="trainDestinationInput" placeholder="Enter Train Destination">
+                                <div class="form-row">
+                                    <label class="col-md-3 formLabel" for="trainDestinationInput">Destination of the Train</label>
+                                    <input type="text" class="form-control col-md-9" id="trainDestinationInput" placeholder="Enter Train Destination">
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="trainFirstTimeInput">First Arrival of Train</label>
-                                    <input type="number" class="form-control" id="trainFirstTimeInput" placeholder="Enter First Train Time">
+                                <div class="form-row">
+                                    <label class="col-md-3 formLabel" for="trainFirstTimeInput">First Arrival of Train (Millitary Time)</label>
+                                    <input type="number" class="form-control col-md-9" id="trainFirstTimeInput" placeholder="Enter First Train Time">
                                 </div>
 
-                                <div class="form-group">
-                                    <label for="trainFrequencyInput">Frequency of Train Arrivals</label>
-                                    <input type="number" class="form-control" id="trainFrequencyInput" placeholder="Enter Train Frequency">
+                                <div class="form-row">
+                                    <label class="col-md-3 formLabel" for="trainFrequencyInput">Frequency of Train Arrivals</label>
+                                    <input type="number" class="form-control col-md-9" id="trainFrequencyInput" placeholder="Enter Train Frequency">
                                 </div>
 
                                 <button type="submit" class="btn btn-primary submitButton">Add Train</button>
@@ -72,8 +71,18 @@
                         </div>
                     </div>
 
-                    
-                </div>
+                    <div class="card resetDisplay">
+                        <div class="card-body">
+                            <div class="card-header">
+                                <h1>Remove All Trains</h1>
+                            </div>
+    
+                            <div class="card-body">
+                                <button class="col-md-3 resetButton">Click me to reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>               
 
                 <div class="d-none d-md-block col-md-1"></div>
             </div>
